@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="100dp"
+    android:layout_margin="4dp"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="10dp"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_back"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rvtime"
+            android:gravity="center"
+            android:text="time"
+            android:textColor="@color/white"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rvtemp"
+            android:gravity="center"
+            android:text="20"
+            android:padding="15dp"
+            android:textSize="28sp"
+            android:textColor="@color/white"
+            android:textAlignment="center"/>
+        <ImageView
+            android:id="@+id/rvconditionImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="4dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher_round">
+
+        </ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rvCondition"
+            android:gravity="center"
+            android:text="Foggy"
+            android:padding="3dp"
+            android:layout_margin="4dp"
+            android:textColor="@color/white"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/idIvBack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/black_shade"/>
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:id="@+id/city_name"
+            android:padding="20dp"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bangladesh"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:fontFamily="casual"
+            android:textSize="20sp">
+
+        </TextView>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_below="@id/city_name"
+            android:weightSum="5"
+            android:id="@+id/LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/EditInputLayout"
+                android:layout_margin="10dp"
+                android:layout_weight="4.5"
+                android:hint="Enter the City Name"
+                android:padding="5dp"
+                app:hintTextColor="@color/white"
+                android:textColorHint="@color/white"
+                android:background="@android:color/transparent">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/editcityname">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/searchImageView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_weight="0.5"
+                android:outlineAmbientShadowColor="@color/white"
+                android:background="@android:color/transparent"
+                android:src="@drawable/sricon" />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cityTemperature"
+            android:layout_below="@id/LinearLayout"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="23"
+            android:textSize="50sp"
+            android:textColor="@color/white"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ConditionImage"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/cityTemperature"
+            android:layout_margin="10dp"
+            android:src="@mipmap/ic_launcher_round"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ConditionText"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Foggy"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:layout_below="@id/ConditionImage"/>
+        <TextView
+            android:id="@+id/Today"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Today`s ForeCast"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/ConditionText"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recylerView"
+            android:layout_below="@id/Today"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
